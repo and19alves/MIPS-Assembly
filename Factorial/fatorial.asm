@@ -1,4 +1,3 @@
-# Anderson Alves Araujo - 12011BCC031
 
 # --------------------------------------------------------------
 #   int n;
@@ -8,7 +7,7 @@
 #    scanf("%d", &n);
 
 #    if(n < 0)
-#        printf("\n N„o existe fatorial menor a 0");
+#        printf("\n N√£o existe fatorial menor a 0");
 
 #    if (n == 0){
 #        printf("\n Fatorial de 0 sera: 1");
@@ -22,10 +21,10 @@
 #    return 0;
 
 # --------------------------------------------------------------
-# t0 = Guarda endereÁo do Label FAT
+# t0 = Guarda endere√ßo do Label FAT
 # s0 = Guarda o conteudo de FAT
 
-# t1 = Guarda endereÁo do Label N
+# t1 = Guarda endere√ßo do Label N
 # s1 = Guarda o conteudo de N
 
 # t2 = Guarda a resposta logica de (if N < 0)
@@ -45,9 +44,9 @@
 	n: 	.space 4  #   int n;
 	fat:    .space 4  #    int fat=1 (Precisamos ainda atribuir 1 a fat);
 	str1:	.asciiz "Digite o valor desejado: "
-	str0:	.asciiz "N„o existe fatorial menor que 0."
-	strf0:  .asciiz "Fatorial de 0 ser·: 1"
-	strs0:  .asciiz " Fatorial ser· igual a: "
+	str0:	.asciiz "N√£o existe fatorial menor que 0."
+	strf0:  .asciiz "Fatorial de 0 ser√°: 1"
+	strs0:  .asciiz " Fatorial ser√° igual a: "
 	 
 .text
 	# int fat = 1;
@@ -82,13 +81,13 @@ nmai0: #Nmaior que zero
 	 
 	# x <= n
 	 addiu $s2, $zero, 1 #Contador do for (X = 1)
-	 addiu $s4, $s1,1  # Para realizaÁ„o do for, vou considerar que s4 ser· (valor digitado + 1)
+	 addiu $s4, $s1,1  # Para realiza√ß√£o do for, vou considerar que s4 ser√° (valor digitado + 1)
 
-For: 	# LaÁo FOR
+For: 	# La√ßo FOR
  	 slt $t4, $s2,$s4 	# Enquanto s2(contador) for menor que s4(valordigitado+1) 
-	 #T4 ser· 1 se (s2 < s4)  |  T4 ser· 0 se (s2 >= s4)
+	 #T4 ser√° 1 se (s2 < s4)  |  T4 ser√° 0 se (s2 >= s4)
 	 
-	 beq $t4, $zero,saiFor #Saida do laÁo for
+	 beq $t4, $zero,saiFor #Saida do la√ßo for
 	 
 	 ### FOR
 	 mul $s0, $s0, $s2   # fat = fat * x
